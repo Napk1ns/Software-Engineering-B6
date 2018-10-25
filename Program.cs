@@ -95,6 +95,8 @@ namespace ConsoleApp1
 
 		static void Main(string[] args)
 		{
+			Console.Write("Enter film title: ");
+			string title = Console.ReadLine();
 			Film film = GetFilmAsync("blade runner").Result;
 			Console.WriteLine("Film title: {0}", film.Title);
 			Console.ReadLine();			
