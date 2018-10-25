@@ -55,8 +55,8 @@ namespace ConsoleApp1
 		[DataMember]
 		internal string Poster;
 
-		[DataMember]
-		internal string Ratings;
+		// [DataMember]
+		// internal string Ratings;
 
 		[DataMember]
 		internal string Metascore;
@@ -95,13 +95,13 @@ namespace ConsoleApp1
 
 		static void Main(string[] args)
 		{
-			Console.WriteLine(GetFilmAsync("blade runner"));
+			Film film = GetFilmAsync("blade runner").Result;
+			Console.WriteLine("Film title: {0}", film.Title);
 			Console.ReadLine();			
 		}
 
 		static async Task<Film> GetFilmAsync(string title)
 		{
-			title.Replace(' ', '+');
 			HttpResponseMessage response = await client.GetAsync(string.Format("http://www.omdbapi.com/?t={0}&apikey=b413c0e5", title));
 
 			Film film = new Film();
@@ -109,12 +109,9 @@ namespace ConsoleApp1
 			if (response.IsSuccessStatusCode)
 			{
 				string json = await response.Content.ReadAsStringAsync();
-				Console.WriteLine(json);
 				MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(json));
 				DataContractJsonSerializer ser = new DataContractJsonSerializer(film.GetType());
 				film = ser.ReadObject(ms) as Film;
-				Console.WriteLine("============================");
-				Console.WriteLine("Title: {0}, Year: {1}, Rating: {2}",film.Title, film.Year, film.Rated);
 				return film;
 			}
 			return film;
