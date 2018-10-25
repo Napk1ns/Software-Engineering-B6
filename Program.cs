@@ -97,7 +97,7 @@ namespace ConsoleApp1
 		{
 			Console.Write("Enter film title: ");
 			string title = Console.ReadLine();
-			Film film = GetFilmAsync("blade runner").Result;
+			Film film = GetFilmAsync(title).Result;
 			Console.WriteLine("Film title: {0}", film.Title);
 			Console.ReadLine();			
 		}
