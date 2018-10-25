@@ -17,76 +17,76 @@ namespace ConsoleApp1
 		internal string Title;
 
 		[DataMember]
-		internal int Year;
+		internal string Year;
 
 		[DataMember]
-		internal int Rated;
+		internal string Rated;
 
 		[DataMember]
-		internal int Released;
+		internal string Released;
 
 		[DataMember]
-		internal int Runtime;
+		internal string Runtime;
 
 		[DataMember]
-		internal int Genre;
+		internal string Genre;
 
 		[DataMember]
-		internal int Director;
+		internal string Director;
 
 		[DataMember]
-		internal int Writer;
+		internal string Writer;
 
 		[DataMember]
-		internal int Actors;
+		internal string Actors;
 
 		[DataMember]
-		internal int Plot;
+		internal string Plot;
 
 		[DataMember]
-		internal int Language;
+		internal string Language;
 
 		[DataMember]
-		internal int Country;
+		internal string Country;
 
 		[DataMember]
-		internal int Awards;
+		internal string Awards;
 
 		[DataMember]
-		internal int Poster;
+		internal string Poster;
 
 		[DataMember]
-		internal int Ratings;
+		internal string Ratings;
 
 		[DataMember]
-		internal int Metascore;
+		internal string Metascore;
 
 		[DataMember]
-		internal int imdbRating;
+		internal string imdbRating;
 
 		[DataMember]
-		internal int imdbVotes;
+		internal string imdbVotes;
 
 		[DataMember]
-		internal int imdbID;
+		internal string imdbID;
 
 		[DataMember]
-		internal int Type;
+		internal string Type;
 
 		[DataMember]
-		internal int DVD;
+		internal string DVD;
 
 		[DataMember]
-		internal int BoxOffice;
+		internal string BoxOffice;
 
 		[DataMember]
-		internal int Production;
+		internal string Production;
 
 		[DataMember]
-		internal int Website;
+		internal string Website;
 
 		[DataMember]
-		internal int Response;
+		internal string Response;
 	}
 
 	class Program
@@ -114,7 +114,7 @@ namespace ConsoleApp1
 				DataContractJsonSerializer ser = new DataContractJsonSerializer(film.GetType());
 				film = ser.ReadObject(ms) as Film;
 				Console.WriteLine("============================");
-				Console.WriteLine(film.Title);
+				Console.WriteLine("Title: {0}, Year: {1}, Rating: {2}",film.Title, film.Year, film.Rated);
 				return film;
 			}
 			return film;
