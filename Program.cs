@@ -15,6 +15,78 @@ namespace ConsoleApp1
 	{
 		[DataMember]
 		internal string Title;
+
+		[DataMember]
+		internal int Year;
+
+		[DataMember]
+		internal int Rated;
+
+		[DataMember]
+		internal int Released;
+
+		[DataMember]
+		internal int Runtime;
+
+		[DataMember]
+		internal int Genre;
+
+		[DataMember]
+		internal int Director;
+
+		[DataMember]
+		internal int Writer;
+
+		[DataMember]
+		internal int Actors;
+
+		[DataMember]
+		internal int Plot;
+
+		[DataMember]
+		internal int Language;
+
+		[DataMember]
+		internal int Country;
+
+		[DataMember]
+		internal int Awards;
+
+		[DataMember]
+		internal int Poster;
+
+		[DataMember]
+		internal int Ratings;
+
+		[DataMember]
+		internal int Metascore;
+
+		[DataMember]
+		internal int imdbRating;
+
+		[DataMember]
+		internal int imdbVotes;
+
+		[DataMember]
+		internal int imdbID;
+
+		[DataMember]
+		internal int Type;
+
+		[DataMember]
+		internal int DVD;
+
+		[DataMember]
+		internal int BoxOffice;
+
+		[DataMember]
+		internal int Production;
+
+		[DataMember]
+		internal int Website;
+
+		[DataMember]
+		internal int Response;
 	}
 
 	class Program
