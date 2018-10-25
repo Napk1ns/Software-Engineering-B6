@@ -98,7 +98,7 @@ namespace ConsoleApp1
 			Console.Write("Enter film title: ");
 			string title = Console.ReadLine();
 			Film film = GetFilmAsync(title).Result;
-			Console.WriteLine("Title: {0}, Year: {1}, Rating: {2}, Released: {3}, Runtime: {4}, Genre: {5}, Director: {6}, Writer: {7}, Actor: {8}, Plot: {9}, Language: {10}, Country: {11}, Awards: {12}, Poster: {13}, Metascore: {14}, IMDB Rating: {15}, IMDB Votes: {16}, IMDB ID: {17}, Type: {18}, DVD Release date: {19}, Box Office: {20}, Production: {21}, Website: {22}, Response: {23}",film.Title, film.Year, film.Rated, film.Released, film.Runtime, film.Genre, film.Director, film.Writer, film.Actor, film.Plot, film.Language, film.Country, film.Awards, film.Poster, film.Metascore, film.imdbRating, film.imdbVotes, film.imdbid, film.Type, film.DVD, film.BoxOffice, film.Production, film.Website, film.Response);
+			Console.WriteLine("Title: {0}, Year: {1}, Rating: {2}, Released: {3}, Runtime: {4}, Genre: {5}, Director: {6}, Writer: {7}, Actor: {8}, Plot: {9}, Language: {10}, Country: {11}, Awards: {12}, Poster: {13}, Metascore: {14}, IMDB Rating: {15}, IMDB Votes: {16}, IMDB ID: {17}, Type: {18}, DVD Release date: {19}, Box Office: {20}, Production: {21}, Website: {22}, Response: {23}",film.Title, film.Year, film.Rated, film.Released, film.Runtime, film.Genre, film.Director, film.Writer, film.Actors, film.Plot, film.Language, film.Country, film.Awards, film.Poster, film.Metascore, film.imdbRating, film.imdbVotes, film.imdbID, film.Type, film.DVD, film.BoxOffice, film.Production, film.Website, film.Response);
 			Console.ReadLine();			
 		}
 
