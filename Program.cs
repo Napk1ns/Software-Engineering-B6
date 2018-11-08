@@ -102,10 +102,10 @@ namespace ConsoleApp1
 			Console.WriteLine("Film databases:");
 			for (int i = 1; i <= filmDatabases.Count; i++)
 			{
-				Console.WriteLine(i + ": " + filmDatabases[i]);
+				Console.WriteLine(i + ": " + filmDatabases[i-1]);
 			}
 			Console.Write("Choose a film database: ");
-			int db = int.Parse(Console.ReadLine());
+			int db = int.Parse(Console.ReadLine()) - 1;
 			Console.Write("Enter film title: ");
 			string title = Console.ReadLine();
 			Film film = GetFilmAsync(title, filmDatabases[db]).Result;
@@ -118,11 +118,12 @@ namespace ConsoleApp1
 			string url;
 			switch (db)
 			{
-				case "OMDB":
-					url = "http://www.omdbapi.com/?t={0}&apikey=b413c0e5"
-					break;
 				case "TMDB":
-					url = "https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&query={0}"
+					url = "https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&query={0}";
+					break;
+				default:
+				case "OMDB":
+					url = "http://www.omdbapi.com/?t={0}&apikey=b413c0e5";
 					break;
 			}
 			HttpResponseMessage response = await client.GetAsync(string.Format(url, title));
