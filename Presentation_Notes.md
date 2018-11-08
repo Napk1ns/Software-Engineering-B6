@@ -10,7 +10,7 @@ Sprint:
 One sprint session
 2 hours
 
-Use case diagram assembled
+Use case diagram components assembled
 Use case diagram drawn
 Sprint consisted of planning phase using trello
 Sprint planning: user stories
@@ -34,9 +34,11 @@ Trello, Github
 
 Pretty effective
 
-Scrum has been an effective tool for coallating ideas, 
+Trello has been an effective tool for coallating ideas, 
 especially with a limited team size. Really helps
 improve efficiency
+
+Github is a very efficient system for sharing progress in real time. Also useful for 'code review'-- reading and making sure others' changes fit the coding standards for the rest of the project.
 
 Expectations:
 Would involve a lot of API interfacing.
@@ -45,3 +47,8 @@ An effective planning mechanism. Nice to refer to stories
 Helps keep ideas organised.
 Disadvantages:
 Planning not as useful with limited team size
+
+Requirements changed (Feature update) occured after initial sprint, 
+Next sprint will focus on tackling these new features.
+
+
