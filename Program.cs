@@ -107,7 +107,7 @@ namespace ConsoleApp1
 			Console.Write("Choose a film database: ");
 			string input = Console.ReadLine();
 			int db;
-			while (!int.TryParse(input, out db) && (db >= 1 || db <= filmDatabases.Count))
+			while (!int.TryParse(input, out db) || (db < 1 || db > filmDatabases.Count))
 			{
 				input = Console.ReadLine();
 			}
