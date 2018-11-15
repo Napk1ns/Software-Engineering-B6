@@ -100,12 +100,17 @@ namespace ConsoleApp1
 				"TMDB"
 			};
 			Console.WriteLine("Film databases:");
-			for (int i = 1; i <= filmDatabases.Count; i++)
+			for (int i = 0; i < filmDatabases.Count; i++)
 			{
-				Console.WriteLine(i + ": " + filmDatabases[i-1]);
+				Console.WriteLine(i+1 + ": " + filmDatabases[i]);
 			}
 			Console.Write("Choose a film database: ");
-			int db = int.Parse(Console.ReadLine()) - 1;
+			string input = Console.ReadLine();
+			int db;
+			while (!int.TryParse(input, out db) || (db < 1 || db > filmDatabases.Count))
+			{
+				input = Console.ReadLine();
+			}
 			Console.Write("Enter film title: ");
 			string title = Console.ReadLine();
 			Film film;
@@ -115,7 +120,7 @@ namespace ConsoleApp1
 			}
 			else
 			{
-				film = GetFilmAsync(title, filmDatabases[db]).Result;
+				film = GetFilmAsync(title, filmDatabases[db-1]).Result;
 			}
 			Console.WriteLine("Title: {0}, Year: {1}, Rating: {2}, Released: {3}, Runtime: {4}, Genre: {5}, Director: {6}, Writer: {7}, Actor: {8}, Plot: {9}, Language: {10}, Country: {11}, Awards: {12}, Poster: {13}, Metascore: {14}, IMDB Rating: {15}, IMDB Votes: {16}, IMDB ID: {17}, Type: {18}, DVD Release date: {19}, Box Office: {20}, Production: {21}, Website: {22}, Response: {23}",film.Title, film.Year, film.Rated, film.Released, film.Runtime, film.Genre, film.Director, film.Writer, film.Actors, film.Plot, film.Language, film.Country, film.Awards, film.Poster, film.Metascore, film.imdbRating, film.imdbVotes, film.imdbID, film.Type, film.DVD, film.BoxOffice, film.Production, film.Website, film.Response);
 			Console.ReadLine();			
