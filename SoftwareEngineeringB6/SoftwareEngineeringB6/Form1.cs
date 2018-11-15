@@ -118,7 +118,14 @@ namespace SoftwareEngineeringB6
 			string db = comboBox1.Text;
 			Film film = new Film();
 			Task.Run(() => {
-				film = GetFilmAsync(title, db).Result;
+				if (title == "random")
+				{
+					film = GetRandomFilmAsync().Result;
+				}
+				else
+				{
+					film = GetFilmAsync(title, db).Result;
+				}
 			}).Wait();
 			textBox1.Text = string.Format("Title: {0}, \r\nYear: {1}, \r\nRating: {2}, \r\nReleased: {3}, \r\nRuntime: {4}, \r\nGenre: {5}, \r\nDirector: {6}, \r\nWriter: {7}, \r\nActor: {8}, \r\nPlot: {9}, \r\nLanguage: {10}, \r\nCountry: {11}, \r\nAwards: {12}, \r\nPoster: {13}, \r\nMetascore: {14}, \r\nIMDB Rating: {15}, \r\nIMDB Votes: {16}, \r\nIMDB ID: {17}, \r\nType: {18}, \r\nDVD Release date: {19}, \r\nBox Office: {20}, \r\nProduction: {21}, \r\nWebsite: {22}, \r\nResponse: {23}", film.Title, film.Year, film.Rated, film.Released, film.Runtime, film.Genre, film.Director, film.Writer, film.Actors, film.Plot, film.Language, film.Country, film.Awards, film.Poster, film.Metascore, film.imdbRating, film.imdbVotes, film.imdbID, film.Type, film.DVD, film.BoxOffice, film.Production, film.Website, film.Response);
 		}
@@ -141,6 +148,26 @@ namespace SoftwareEngineeringB6
 			Film film = new Film();
 
 			if (response.IsSuccessStatusCode)
+			{
+				string json = await response.Content.ReadAsStringAsync();
+				MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(json));
+				DataContractJsonSerializer ser = new DataContractJsonSerializer(film.GetType());
+				film = ser.ReadObject(ms) as Film;
+				return film;
+			}
+			return film;
+		}
+		
+		static async Task<Film> GetRandomFilmAsync()
+		{
+			Random r = new Random();
+			string imdbID = "tt" + r.Next(10000000).ToString("D7");
+			
+			string url = "http://www.omdbapi.com/?i={0}&apikey=b413c0e5";
+			
+			HttpResponseMessage response = await client.GetAsync(string.Format(url, imdbID));
+ 			Film film = new Film();
+ 			if (response.IsSuccessStatusCode)
 			{
 				string json = await response.Content.ReadAsStringAsync();
 				MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(json));
