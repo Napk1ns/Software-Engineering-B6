@@ -8,3 +8,13 @@ C:\Users\Student\Desktop\SoftwareEngineeringB6\SoftwareEngineeringB6\obj\Debug\S
 C:\Users\Student\Desktop\SoftwareEngineeringB6\SoftwareEngineeringB6\obj\Debug\SoftwareEngineeringB6.csproj.CoreCompileInputs.cache
 C:\Users\Student\Desktop\SoftwareEngineeringB6\SoftwareEngineeringB6\obj\Debug\SoftwareEngineeringB6.exe
 C:\Users\Student\Desktop\SoftwareEngineeringB6\SoftwareEngineeringB6\obj\Debug\SoftwareEngineeringB6.pdb
+C:\Users\Student\Desktop\SoftwareEng\Software-Engineering-B6-master\SoftwareEngineeringB6\SoftwareEngineeringB6\bin\Debug\SoftwareEngineeringB6.exe.config
+C:\Users\Student\Desktop\SoftwareEng\Software-Engineering-B6-master\SoftwareEngineeringB6\SoftwareEngineeringB6\bin\Debug\SoftwareEngineeringB6.exe
+C:\Users\Student\Desktop\SoftwareEng\Software-Engineering-B6-master\SoftwareEngineeringB6\SoftwareEngineeringB6\bin\Debug\SoftwareEngineeringB6.pdb
+C:\Users\Student\Desktop\SoftwareEng\Software-Engineering-B6-master\SoftwareEngineeringB6\SoftwareEngineeringB6\obj\Debug\SoftwareEngineeringB6.csprojAssemblyReference.cache
+C:\Users\Student\Desktop\SoftwareEng\Software-Engineering-B6-master\SoftwareEngineeringB6\SoftwareEngineeringB6\obj\Debug\SoftwareEngineeringB6.Form1.resources
+C:\Users\Student\Desktop\SoftwareEng\Software-Engineering-B6-master\SoftwareEngineeringB6\SoftwareEngineeringB6\obj\Debug\SoftwareEngineeringB6.Properties.Resources.resources
+C:\Users\Student\Desktop\SoftwareEng\Software-Engineering-B6-master\SoftwareEngineeringB6\SoftwareEngineeringB6\obj\Debug\SoftwareEngineeringB6.csproj.GenerateResource.cache
+C:\Users\Student\Desktop\SoftwareEng\Software-Engineering-B6-master\SoftwareEngineeringB6\SoftwareEngineeringB6\obj\Debug\SoftwareEngineeringB6.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\SoftwareEng\Software-Engineering-B6-master\SoftwareEngineeringB6\SoftwareEngineeringB6\obj\Debug\SoftwareEngineeringB6.exe
+C:\Users\Student\Desktop\SoftwareEng\Software-Engineering-B6-master\SoftwareEngineeringB6\SoftwareEngineeringB6\obj\Debug\SoftwareEngineeringB6.pdb
