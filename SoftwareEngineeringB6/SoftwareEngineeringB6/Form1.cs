@@ -38,17 +38,7 @@ namespace SoftwareEngineeringB6
 		{
 			string title = searchText.Text;
 			string db = comboBox1.Text;
-			FilmDatabaseFacade filmDb;
-			switch (db)
-			{
-				case "TMDB":
-					filmDb = new TMDB();
-					break;
-				case "OMDB":
-				default:
-					filmDb = new OMDB();
-					break;
-			}
+			FilmDatabaseFacade filmDb = FilmDatabaseFactory.Create(db);
 			Film film = new Film();
 			Task.Run(() => {
 				if (title == "random")

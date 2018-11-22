@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace SoftwareEngineeringB6
 {
 	[DataContract]
-	class Film
+	public class Film
 	{
 		
 			

@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace SoftwareEngineeringB6
 {
-	interface FilmDatabaseFacade
+	public abstract class FilmDatabaseFacade
 	{
-		Task<Film> GetFilmAsync(string title);
-
-		Task<Film> GetRandomFilmAsync();
+		public abstract Task<Film> GetFilmAsync(string title);
+		public abstract Task<Film> GetRandomFilmAsync();
 	}
 }

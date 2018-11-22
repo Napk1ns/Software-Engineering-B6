@@ -15,7 +15,7 @@ namespace SoftwareEngineeringB6
 
 		static string url = "http://www.omdbapi.com/?t={0}&apikey=b413c0e5";
 
-		public async Task<Film> GetFilmAsync(string title)
+        public override async Task<Film> GetFilmAsync(string title)
 		{			
 			HttpResponseMessage response = await client.GetAsync(string.Format(url, title));
 
@@ -32,7 +32,7 @@ namespace SoftwareEngineeringB6
 			return film;
 		}
 
-		public async Task<Film> GetRandomFilmAsync()
+		public override async Task<Film> GetRandomFilmAsync()
 		{
 			Random r = new Random();
 			string imdbID = "tt" + r.Next(10000000).ToString("D7");
